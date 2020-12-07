@@ -1,0 +1,21 @@
+.text-input-container {
+    display: inline-flex;
+    width: 100%;
+    input[type=text], input[type=password] {
+        font-family: Gilroy;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #d1d1d1;
+        font-size: 15px;
+        padding: 5px 8px;
+        border-radius: none;
+
+        &:focus {
+            border-color: #47cec1;
+            outline: none;
+        }
+    }
+    img {
+        vertical-align: middle;
+    }
+}

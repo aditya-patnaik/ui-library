@@ -1,4 +1,5 @@
 import * as React from "react"
+import "./../../css/text-input.scss"
 
 interface TextInputProps {
     onChangeHandler: (evt: React.ChangeEvent<HTMLInputElement>) => void
@@ -29,4 +30,4 @@ class TextInput extends React.Component<TextInputProps> {
     }
 }
 
-export default TextInput
+export {TextInput}

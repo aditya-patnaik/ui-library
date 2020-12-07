@@ -1,5 +1,6 @@
 import * as React from "react"
 import * as _ from "lodash"
+import "./../../css/dropdown.scss"
 
 interface IDropdownOption {
     key: string;
@@ -135,4 +136,4 @@ class Dropdown extends React.Component<DropdownProps, DropdownState> {
     }
 }
 
-export default Dropdown;
+export {Dropdown};

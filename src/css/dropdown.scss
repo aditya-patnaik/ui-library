@@ -1,0 +1,118 @@
+.dropdown {
+    $self: &;
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+
+    &__select-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 0 5px lightgrey;
+        padding: 5px 15px;
+        border-radius: 10px;
+        letter-spacing: 0.5px;
+        color: #565656;
+        background: #ffffff;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &--active {
+        #{$self}__select-box {
+            background: aliceblue;
+            outline: none;
+        }
+    }
+
+    &__dropdown-icon {
+        height: 15px;
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+
+    &__select-box-text-container {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__select-box-image-container {
+        margin-right: 10px;
+        img {
+            max-width: 20px;
+            max-height: 20px;
+        }
+    }
+
+    &__options-container {
+        display: none;
+        position: absolute;
+        z-index: 10;
+        background: #ffffff;
+        width: 100%;
+        max-height: 350px;
+        overflow-y: auto;
+
+        &--active {
+            display: block;
+            margin-top: 8px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px lightgrey;
+        }
+    }
+
+    &__option {
+        font-size: 14px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background: aliceblue;
+        }
+    }
+
+    &__option-subtext {
+        font-size: 11px;
+        color: #9a9a9a;
+        margin-top: 4px;
+    }
+
+    &__option-image {
+        margin-right: 10px;
+        img {
+            max-width: 20px;
+            max-height: 20px;
+        }
+    }
+
+    // Option Group
+    &__option-group-container {
+        margin: 10px 0;
+        padding: 10px 0;
+        border-bottom: 1px solid lightgrey;
+
+        &:last-child {
+            border-bottom-color: transparent;
+        }
+    }
+
+    &__option-group-header {
+        display: flex;
+        align-items: center;
+        padding: 2px 10px;
+        color: #717171;
+        font-size: 13px;
+    }
+
+    &__option-group-icon {
+        height: 15px;
+        margin-right: 5px;
+    }
+}
